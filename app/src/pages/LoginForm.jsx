@@ -13,13 +13,16 @@ function LoginForm() {
 
   const onSubmit = async (formData) => {
     try {
-      const res = await fetch("http://localhost:4201/api/user/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+      const res = await fetch(
+        "https://inventorymangament-system-app.onrender.com/api/user/login",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
         },
-        body: JSON.stringify(formData),
-      });
+      );
 
       const data = await res.json();
 

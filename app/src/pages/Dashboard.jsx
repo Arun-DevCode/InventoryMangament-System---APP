@@ -9,7 +9,7 @@ function Dashboard() {
       const accessToken = localStorage.getItem("accessToken");
 
       const res = await fetch(
-        "http://localhost:4201/api/user/get-user-profile",
+        "https://inventorymangament-system-app.onrender.com/api/user/get-user-profile",
         {
           method: "GET",
           headers: {
